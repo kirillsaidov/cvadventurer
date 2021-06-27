@@ -1,0 +1,3 @@
+/Users/KS/Desktop/media/dev/repos/gitlab/cvadventurer/image_manipulations/build/CMakeFiles/rebuild_cache.dir
+/Users/KS/Desktop/media/dev/repos/gitlab/cvadventurer/image_manipulations/build/CMakeFiles/edit_cache.dir
+/Users/KS/Desktop/media/dev/repos/gitlab/cvadventurer/image_manipulations/build/CMakeFiles/image_manipulations.dir
