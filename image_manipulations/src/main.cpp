@@ -74,54 +74,51 @@ cv::Mat modify_img(const cv::Mat img, const char action_type) {
     cv::Mat img_brightness;
     cv::Mat img_contrast;
 
-    if(action_type == '1') {
-        // convert to grayscale
-        cv::cvtColor(img, img_bw, cv::COLOR_BGR2GRAY);
+    switch(action_type) {
+        case '1':
+            // convert to grayscale
+            cv::cvtColor(img, img_bw, cv::COLOR_BGR2GRAY);
         
-        // apply Blur effect
-        cv::GaussianBlur(img_bw, img_blurred, cv::Size(5, 5), 1);
+            // apply Blur effect
+            cv::GaussianBlur(img_bw, img_blurred, cv::Size(5, 5), 1);
         
-        // apply Canny Edge effect
-        cv::Canny(img_blurred, img_canny, 10, 200);
+            // apply Canny Edge effect
+            cv::Canny(img_blurred, img_canny, 10, 200);
         
-        return img_canny;
-    } else if(action_type == '2') {
-        // applying Eroding effect
-        cv::erode(img, img_erode, 
-                cv::Mat(),          // 3x3 kernel 
-                cv::Point(-1, -1),  // anchor is at the element center
-                1,                  // iterations
-                cv::BORDER_CONSTANT,// border
-                1);                 // scalar
+            return img_canny;
+        case '2':
+            // applying Eroding effect
+            cv::erode(img, img_erode, 
+                    cv::Mat(),          // 3x3 kernel 
+                    cv::Point(-1, -1),  // anchor is at the element center
+                    1,                  // iterations
+                    cv::BORDER_CONSTANT,// border
+                    1);                 // scalar
 
-        return img_erode;
-    } else if(action_type == '3') {
-        // applying Dilating effect
-        cv::dilate(img, img_dilate, 
-                cv::Mat(),          // 3x3 kernel
-                cv::Point(-1, -1),  // anchor is at the element center
-                1,                  // iterations
-                cv::BORDER_CONSTANT,// border
-                1);                 // scalar
+            return img_erode;
+        case '3':
+            // applying Dilating effect
+            cv::dilate(img, img_dilate, 
+                    cv::Mat(),          // 3x3 kernel
+                    cv::Point(-1, -1),  // anchor is at the element center
+                    1,                  // iterations
+                    cv::BORDER_CONSTANT,// border
+                    1);                 // scalar
 
-        return img_dilate;
-    } else if(action_type == '4') {
-        cv::bitwise_not(img, img_not);
-
-        return img_not;
-    } else if(action_type == '5') {
-        img.convertTo(img_brightness, -1, 1, 50);
-        
-        return img_brightness;
-    } else if(action_type == '6') {
-        img.convertTo(img_contrast, -1, 3, 0);
-
-        return img_contrast;
-    } else {
-        // action_type = 0 => Blur effect
-        cv::GaussianBlur(img, img_blurred, cv::Size(9, 9), 0);
-        
-        return img_blurred; 
+            return img_dilate;
+        case '4':
+            cv::bitwise_not(img, img_not);
+            return img_not;
+        case '5':
+            img.convertTo(img_brightness, -1, 1, 50);
+            return img_brightness;
+        case '6':
+            img.convertTo(img_contrast, -1, 3, 0);
+            return img_contrast;
+        default:
+            // action_type = 0 => Blur effect
+            cv::GaussianBlur(img, img_blurred, cv::Size(9, 9), 0);
+            return img_blurred; 
     }
 }
 
