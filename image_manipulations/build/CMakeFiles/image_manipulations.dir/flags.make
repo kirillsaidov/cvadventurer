@@ -4,7 +4,7 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/KS/Desktop/media/dev/repos/gitlab/cvadventurer/image_manipulations/include -isystem /usr/local/Cellar/opencv/4.5.2_4/include/opencv4
+CXX_INCLUDES = -isystem /usr/local/Cellar/opencv/4.5.2_4/include/opencv4
 
 CXX_FLAGS =  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu++14
 

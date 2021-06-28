@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/Users/KS/Desktop/media/dev/repos/gitlab/cvadventurer/bin/image_manipulations"
-  "/Users/KS/Desktop/media/dev/repos/gitlab/cvadventurer/bin/image_manipulations.pdb"
+  "../bin/image_manipulations"
+  "../bin/image_manipulations.pdb"
   "CMakeFiles/image_manipulations.dir/src/main.cpp.o"
   "CMakeFiles/image_manipulations.dir/src/main.cpp.o.d"
 )
