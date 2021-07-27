@@ -1,3 +1,3 @@
 # CV Adventurer
 
-A collection of Computer Vision code samples and mini-projects. 
+A collection of Computer Vision projects and code samples. 
