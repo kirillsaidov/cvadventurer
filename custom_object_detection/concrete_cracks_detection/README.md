@@ -9,6 +9,8 @@ The model accuracy as of now is 22.1%. The reason is it needs more epochs to run
 
 ## Requirements
 * Python
+* YOLO (added as a git submodule)
+`git submodule update --init --recursive`
 * Install YOLO dependencies via `pip` (requirements.txt)
 
 ## Training
