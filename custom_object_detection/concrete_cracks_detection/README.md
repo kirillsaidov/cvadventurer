@@ -1,4 +1,4 @@
-# Custom Object Detection
+# Concrete Cracks Detection
 This is a concrete cracks detection model using YOLOv5. 
 
 ## Images
