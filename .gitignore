@@ -2,10 +2,9 @@
 bin/
 lib/
 __internal/
-train/
-test/
-val/
-
+images/
+labels/
+yolov5/
 
 
 
