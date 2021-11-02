@@ -21,7 +21,19 @@ git clone https://github.com/ultralytics/yolov5.git yolov5
 ```
 cp custom_config.yaml yolov5/data
 ```
-3. Train the model
+3. Create a data folder with your images
+```
+- data
+    - images
+	- train
+	- test
+	- val
+    - labels
+	- train
+	- test
+	- val
+```
+4. Train the model
 ```
 python3 train.py --batch 16 --epochs 120 --data custom_config.yaml --weights yolov5x.pt --nosave --cache 
 ```
