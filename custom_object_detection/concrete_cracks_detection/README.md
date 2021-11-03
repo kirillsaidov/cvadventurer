@@ -1,23 +1,25 @@
 # Concrete Cracks Detection
 This is a concrete cracks detection model using YOLOv5. 
 
+<img src="imgs/crack_pred.jpg">
+
 ## Images
 All data was found via internet using [Yandex Images](https://yandex.ru/images/). All rights go to their respective owners.
 
 ## Model
-The model accuracy as of now is 22.1%. The reason is it needs more epochs to run. I used 30 epoch and it took an entire day on my laptop. I have tested what I wanted originally, more accuracy is a matter of time now.  
+The model was trained on 120 images for 30 epochs. It's accuracy is ~22.1%. It needs more data and epochs to run. It took an entire day to train the model on my laptop. I have tested what I wanted originally, more accuracy is a matter of time from now on.  
 
 ## Requirements
 * Python
 * YOLO
-* Install YOLO dependencies via `pip` (requirements.txt)
+* Install YOLO dependencies via `pip install -r requirements.txt`
 
 ## Training
 1. Download YOLO 
 ```
 git clone https://github.com/ultralytics/yolov5.git yolov5
 ```
-2. Copy `custom_config.yaml` to `yolov5/data`
+2. Modify and copy `custom_config.yaml` to `yolov5/data`
 ```
 cp custom_config.yaml yolov5/data
 ```
@@ -44,7 +46,7 @@ python3 detect.py --weights ../weights/last.pt --img 640 --conf 0.5 --source my/
 ```
 
 ## Results
-The results may be found at `yolov5/runs/detect/exp#`, where `#` is a number.
+The results may be found at `yolov5/runs/detect/exp#`.
 
 
 
