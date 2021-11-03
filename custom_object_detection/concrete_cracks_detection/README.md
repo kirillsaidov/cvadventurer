@@ -40,6 +40,7 @@ cp custom_config.yaml yolov5/data
 python3 train.py --batch 16 --epochs 120 --data custom_config.yaml --weights yolov5x.pt --nosave --cache 
 ```
 Adjust the `--batch` variable depending on how much RAM you have. I have 8Gb, so I've used `--batch 4`. It was optimal on my setup. 
+
 5. Test your model
 ```
 python3 detect.py --weights ../weights/last.pt --img 640 --conf 0.5 --source my/data/folder
