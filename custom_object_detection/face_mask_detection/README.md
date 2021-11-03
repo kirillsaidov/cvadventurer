@@ -1,5 +1,6 @@
 # Face-Mask Detection
 This model detects a human face and a mask using YOLOv5. 
+<img src="imgs/face-mask_pred.jpg">
 
 ## Images
 All data was found via internet using [Yandex Images](https://yandex.ru/images/). All rights go to their respective owners.
@@ -14,7 +15,7 @@ All data was found via internet using [Yandex Images](https://yandex.ru/images/)
 ```
 git clone https://github.com/ultralytics/yolov5.git yolov5
 ```
-2. Copy `custom_config.yaml` to `yolov5/data`
+2. Modify and copy `custom_config.yaml` to `yolov5/data`
 ```
 cp custom_config.yaml yolov5/data
 ```
@@ -34,7 +35,8 @@ cp custom_config.yaml yolov5/data
 ```
 python3 train.py --batch 16 --epochs 120 --data custom_config.yaml --weights yolov5x.pt --nosave --cache 
 ```
-Adjust the `--batch` variable depending on how much RAM you have. I have 8Gb, so I've used `--batch 4`. It was optimal on my setup. 
+Adjust the `--batch` variable depending on how much RAM you have. 
+
 5. Test your model
 ```
 python3 detect.py --weights ../weights/last.pt --img 640 --conf 0.5 --source my/data/folder
