@@ -39,11 +39,15 @@ Adjust the `--batch` variable depending on how much RAM you have.
 
 5. Test your model
 ```
-python3 detect.py --weights ../weights/last.pt --img 640 --conf 0.5 --source my/data/folder
+python3 detect.py --weights my/weights/folder/last.pt --img 640 --conf 0.5 --source my/data/folder
+```
+6. Export your model to ONNX and torchscript format
+```
+python3 export.py --weights ../weights/last.pt --data ../custom_config.yaml --img 640 --batch 1 --simplify
 ```
 
 ## Results
-The results may be found at `yolov5/runs/detect/exp#`, where `#` is a number.
+The results may be found at `yolov5/runs/train or detect/exp#`, where `#` is a number.
 
 
 
