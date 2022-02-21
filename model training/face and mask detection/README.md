@@ -37,6 +37,7 @@ cp custom_config.yaml yolov5/data
 			- val
 ```
 Copy your images and annotations to these folders.
+
 4. Train the model
 ```
 python3 train.py --batch 16 --epochs 120 --data custom_config.yaml --weights yolov5x.pt --nosave --cache
