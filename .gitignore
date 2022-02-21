@@ -6,8 +6,7 @@ images/
 labels/
 yolov5/
 weights/
-
-
-
+build/
+data/
 
 
