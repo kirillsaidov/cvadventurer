@@ -6,4 +6,4 @@ test: images/test # test images (optional)
 
 # Classes
 nc: 1  # number of classes
-names: ['cracks']  # class names
+names: ['face']  # class names
