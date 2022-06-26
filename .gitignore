@@ -5,7 +5,7 @@ lib/
 __internal/
 images/
 labels/
-yolov5/
+yolov5*/
 weights/
 build/
 data/
