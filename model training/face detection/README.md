@@ -1,6 +1,6 @@
 # Face-Mask Detection
 This model detects a human face and a mask using YOLOv5.
-<img src="imgs/example.jpeg" height="480" align="center">
+<img src="imgs/example.jpeg" height="320" align="center">
 
 ## Images
 All data was found via internet using [Yandex Images](https://yandex.ru/images/). All rights go to their respective owners.
